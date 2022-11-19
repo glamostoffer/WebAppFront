@@ -1,0 +1,239 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  background: rgba(52, 52, 52, 0.91);
+}
+
+h1, h3 {
+  font-weight: 400;
+}
+
+.weather_app {
+  min-height: 100vh;
+  background-image: url("../img/day/rainy.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 0.5s;
+  opacity: 1;
+  color: #fff;
+}
+
+.weather_app::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 0;
+}
+
+.container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 2em 3em 4em 3em;
+}
+
+.container > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.city_time, .temp, .weather {
+  margin: 0 1em;
+}
+
+.city_time h1 {
+  margin: 0 0 0.2em;
+  font-size: 3em;
+}
+
+.temp {
+  font-size: 7em;
+  margin: 0;
+}
+
+.weather img {
+  display: block;
+  margin: 0.5em 0;
+}
+
+.panel {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(120, 120, 120, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1;
+  padding: 3em 0 3em 2em;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  color: #fff;
+}
+
+.panel form {
+  margin-bottom: 3em;
+}
+
+.submit {
+  position: absolute;
+  right: 4em;
+  padding: 0.8em 1.4em;
+  border: none;
+  border-radius: 1.2em;
+  outline: none;
+  background: rgb(218, 164, 21);
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.submit:hover {
+  background: #fff;
+  color: #222;
+}
+
+.input_box {
+  position: absolute;
+  width: 100%;
+  height: 2.5em;
+}
+
+.input_box input {
+  position: absolute;
+  width: 65%;
+  height: 100%;
+  top: 0;
+  background: transparent;
+  box-shadow: none;
+  border: none;
+  outline: none;
+  font-size: 1.2em;
+  padding-left: 2.2em;
+  z-index: 1;
+  color: rgb(0, 0, 0);
+}
+
+.input_box .text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 2.5em;
+  padding: 0 2em;
+  display: block;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.input_box input:focus + .text {
+  top: -2em;
+  left: -0.8em;
+}
+
+.input_box .line {
+  position: absolute;
+  bottom: 0;
+  margin-left: 2em;
+  display: block;
+  width: 60%;
+  height: 2px;
+  background: #fff;
+  transition: 0.5s;
+  border-radius: 2px;
+}
+
+.input_box input:focus ~ .line {
+  height: 100%;
+}
+
+.panel ul {
+  padding: 0 2.2em 1em 2.2em;
+  margin: 2em 0;
+  border-bottom: 1px solid #ccc;
+  list-style: none;
+}
+
+.panel ul li {
+  color: #ccc;
+  margin: 2.5em 0;
+  font-size: 18px;
+}
+
+.panel ul h4 {
+  margin: 3em 0;
+}
+
+.city {
+  display: block;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.city:hover {
+  color: #fff;
+}
+
+.details li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 930px) {
+  /*.weather_app {*/
+  /*  min-height: auto;*/
+  /*}*/
+  .container {
+    position: relative;
+    width: 100%;
+    top: initial;
+  }
+  .panel {
+    position: absolute;
+    width: 100%;
+    height: 60%;
+    top: 40%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    font-size: 12px;
+  }
+  .panel ul li {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  html {
+    font-size: 10px;
+  }
+  .panel ul li {
+    font-size: 12px;
+  }
+  .weather img {
+    width: 40px;
+  }
+}
