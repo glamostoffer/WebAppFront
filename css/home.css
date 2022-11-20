@@ -224,6 +224,9 @@ h1, h3 {
   .panel ul li {
     font-size: 14px;
   }
+  .submit {
+    padding: 0.6em 1.2em;
+  }
 }
 
 @media screen and (max-width: 350px) {
@@ -235,5 +238,8 @@ h1, h3 {
   }
   .weather img {
     width: 40px;
+  }
+  .submit {
+    padding: 0.4em 1em;
   }
 }

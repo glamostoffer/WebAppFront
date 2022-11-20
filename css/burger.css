@@ -1,5 +1,6 @@
 .burger_menu {
   position: absolute;
+  top: 0;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -15,6 +16,15 @@
 
 .logo {
   cursor: pointer;
+  width: 40px;
+  padding: 4px 6px;
+  background: #b3d4fc;
+  border-radius: 12px;
+  transition: 0.3s;
+}
+
+.logo:hover {
+  transform: scale(1.2);
 }
 
 .show_menu {
@@ -50,11 +60,12 @@
   text-decoration: none;
   font-size: 20px;
   text-align: center;
+  border-radius: 14px;
+  padding: 4px 12px;
 }
 
 .menu li a:hover {
-  font-weight: 600;
-  text-shadow: 0 0 4px #70c9c8;
+  background-color: #b3d4fc;
 }
 
 @media screen and (max-width: 500px) {

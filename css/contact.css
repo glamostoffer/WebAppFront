@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  background-image: url("../img/day/rainy.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  transition: 0.5s;
+}
+
+h1, h3 {
+  font-weight: 400;
+}
+
+.logo {
+  margin-left: 3em;
+  margin-top: 2em;
+}
+
+.contact_form {
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  margin: 4em auto;
+  min-height: 30em;
+  width: 75%;
+  padding: 3em;
+  background: rgba(130, 130, 130, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 1;
+  border-radius: 24px;
+}
+
+.contact_form::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 80%;
+  height: 100%;
+  background: rgba(100, 100, 100, 0.1);
+  transform: skew(-20deg);
+  z-index: -1;
+}
+
+.container {
+  width: 85%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(auto-fit, minmax(3em, 1fr));
+  row-gap: 1.6em;
+  column-gap: 1.4em;
+  grid-template-areas:
+    "contact contact"
+    "e-mail name"
+    "message message"
+    "send send";
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(3em, 1fr));
+    row-gap: 2em;
+    column-gap: 1.4em;
+    grid-template-areas:
+    "contact"
+    "e-mail"
+    "name"
+    "message"
+    "send";
+  }
+  /*#send input {*/
+  /*  padding: 0.5em 0.8em;*/
+  /*}*/
+}
+
+@media screen and (min-width: 860px) {
+  .input_box input {
+    font-size: 16px;
+  }
+  .input_box_text textarea {
+    font-size: 16px;
+  }
+}
+
+.container .box {
+  color: aliceblue;
+  width: 100%;
+  text-align: center;
+}
+
+.container h2 {
+  color: aliceblue;
+  width: 100%;
+  text-align: center;
+  grid-area: contact;
+}
+
+.container #mail {
+  grid-area: e-mail;
+}
+
+.container #name {
+  grid-area: name;
+}
+
+.container #message {
+  grid-area: message;
+}
+
+.container #send {
+  grid-area: send;
+}
+
+#send input {
+  padding: 1em 2em;
+  cursor: pointer;
+  border-radius: 24px;
+  border: none;
+  background-color: #b3d4fc;
+  transition: 0.3s;
+  font-family: Rubik, sans-serif;
+  color: #333;
+}
+
+#send input:hover {
+  background-color: #8fafdc;
+}
+
+.container .box .input_box input::placeholder {color: #444;}
+
+.container .box .input_box input::-webkit-input-placeholder {color: #444;}
+
+.container .box .input_box input {
+  padding: 0.4em 0.6em;
+  border-radius: 22px;
+  background: rgba(130, 130, 130, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #444;
+  transition: 0.3s;
+}
+
+.container .box .input_box input:focus {
+  outline: none;
+}
+
+.input_box_text textarea {
+  width: 75%;
+  height: 8em;
+  padding: 1em 0.8em;
+  border-radius: 22px;
+  background: rgba(130, 130, 130, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #444;
+  transition: 0.3s;
+  resize: none;
+  outline: none;
+}
+
+.input_box_text textarea::placeholder {
+  color: #444;
+  font-family: Rubik, sans-serif;
+}
+
+.input_box_text textarea::-webkit-input-placeholder {
+  color: #444;
+  font-family: Rubik, sans-serif;
+}
