@@ -9,7 +9,7 @@
   height: 100%;
   background-color: aliceblue;
   border-right: 2px solid #aaa;
-  z-index: 3;
+  z-index: 100;
   transition: 0.7s;
   transform: translateX(-500px);
 }
@@ -21,6 +21,8 @@
   background: #b3d4fc;
   border-radius: 12px;
   transition: 0.3s;
+  margin-left: 3em;
+  margin-top: 2em;
 }
 
 .logo:hover {

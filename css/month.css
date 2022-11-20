@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Rubik, sans-serif;
+}
+
+body {
+  background: url("../img/calendar_room.png");
+}
+
+.main {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.box {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  margin: 0 auto 24px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 82%;
+  min-height: 520px;
+  background: rgba(130, 130, 130, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+
+#calendar {
+  width: 80%;
+  height: 80%;
+  padding: 20px;
+}
+
+#calendar table {
+  width: 100%;
+  margin-top: 20px;
+}
+
+#calendar table tr:nth-child(1) td {
+  background: #2379a9;
+  color: azure;
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+.dycalendar-body table tr td {
+  background: rgba(130, 130, 130, 0.1);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.32);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+}
+
+@media screen and (max-width: 1000px) {
+  .dycalendar-body table {
+    font-size: 16px;
+  }
+  .dycalendar-body table tr td img {
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .dycalendar-body table {
+    font-size: 14px;
+  }
+  .dycalendar-body table tr td img {
+    height: 24px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .dycalendar-body table {
+    font-size: 12px;
+  }
+  .dycalendar-body table tr td img {
+    height: 20px;
+  }
+  #calendar {
+    padding: 0;
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 320px){
+  #calendar .dycalendar-month-container {
+    padding: 0;
+  }
+  .dycalendar-body table tr td img {
+    height: 16px;
+  }
+  .dycalendar-body table {
+    font-size: 10px;
+  }
+}

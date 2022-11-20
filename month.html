@@ -2,9 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Title</title>
+  <link rel="stylesheet" href="css/burger.css">
+  <link rel="stylesheet" href="css/month.css">
+  <link rel="stylesheet" href="css/dycalendar.css">
+  <script src="js/burger.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Month</title>
 </head>
 <body>
+  <section class="burger_menu">
+    <h3 class="logo">The Weather</h3>
+    <ul class="menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="contact_us.html">Contact us</a></li>
+      <li><a href="month.html">Monthly Weather Forecast</a></li>
+      <li><a href="#">Else</a></li>
+    </ul>
+  </section>
 
+  <img class="logo" src="img/moon.png" alt="logo">
+
+  <section class="main">
+    <div class="box">
+      <div class="container">
+        <div id="calendar">
+        </div>
+      </div>
+    </div>
+  </section>
+  <script src="js/dycalendar.js"></script>
+  <script>
+    dycalendar.draw({
+      target: "#calendar",
+      type: 'month',
+      dayformat: 'full',
+      monthformat: 'full',
+      highlighttargetdate: true,
+      prevnextbutton: 'show'
+    });
+  </script>
 </body>
 </html>
