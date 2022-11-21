@@ -91,13 +91,13 @@ h1, h3 {
 }
 
 .container .box {
-  color: aliceblue;
+  color: Seashell;
   width: 100%;
   text-align: center;
 }
 
 .container h2 {
-  color: aliceblue;
+  color: Seashell;
   width: 100%;
   text-align: center;
   grid-area: contact;
@@ -134,9 +134,9 @@ h1, h3 {
   background-color: #8fafdc;
 }
 
-.container .box .input_box input::placeholder {color: aliceblue;}
+.container .box .input_box input::placeholder {color: Seashell;}
 
-.container .box .input_box input::-webkit-input-placeholder {color: aliceblue;}
+.container .box .input_box input::-webkit-input-placeholder {color: Seashell;}
 
 .container .box .input_box input {
   padding: 0.4em 0.6em;
@@ -146,7 +146,7 @@ h1, h3 {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: #444;
+  color: Seashell;
   transition: 0.3s;
 }
 
@@ -164,18 +164,18 @@ h1, h3 {
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  color: aliceblue;
+  color: Seashell;
   transition: 0.3s;
   resize: none;
   outline: none;
 }
 
 .input_box_text textarea::placeholder {
-  color: aliceblue;
+  color: Seashell;
   font-family: Rubik, sans-serif;
 }
 
 .input_box_text textarea::-webkit-input-placeholder {
-  color: aliceblue;
+  color: Seashell;
   font-family: Rubik, sans-serif;
 }
