@@ -52,7 +52,7 @@ function fetchWeatherData() {
     .then(response => response.json())
     .then(data => {
       console.log(data);
-      temp.innerHTML = data.current.temp_c + '&#176;';
+      temp.innerHTML = Math.trunc(data.current.temp_c)+ '&#176;';
       // console.log(data.current.condition.text);
       conditionOutput.innerHTML = data.current.condition.text;
       const date = data.location.localtime;

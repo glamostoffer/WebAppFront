@@ -221,6 +221,12 @@ h1, h3 {
   }
 }
 
+@media screen and (max-width: 640px) {
+  .weather_app .container .temp {
+    font-size: 5.5em;
+  }
+}
+
 @media screen and (max-width: 500px) {
   html {
     font-size: 12px;
@@ -231,6 +237,7 @@ h1, h3 {
   .submit {
     padding: 0.6em 1.2em;
   }
+
 }
 
 @media screen and (max-width: 350px) {
