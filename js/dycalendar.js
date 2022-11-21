@@ -83,6 +83,7 @@
         count = 1;
         while (c <= 6) {
             td = document.createElement("td");
+          // можно будет сделать, чтоб как на главной страничке в зависимости от погоды менялась иконка
             td.innerHTML = `<img src="../img/icons/day/122.png" alt="icon" height="50">${count}`;
             if (data.today.date === count && data.today.monthIndex === data.monthIndex && option.highlighttoday === true) {
                 td.setAttribute("class", "dycalendar-today-date");
@@ -105,6 +106,7 @@
                     return table;
                 }
                 td = document.createElement('td');
+                // можно будет сделать, чтоб как на главной страничке в зависимости от погоды менялась иконка
                 td.innerHTML = `<img src="../img/icons/day/122.png" alt="icon" height="50">${count}`;
                 if (data.today.date === count && data.today.monthIndex === data.monthIndex && option.highlighttoday === true) {
                     td.setAttribute("class", "dycalendar-today-date");

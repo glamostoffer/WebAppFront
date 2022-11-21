@@ -68,6 +68,12 @@ body {
   border-radius: 12px;
 }
 
+.dycalendar-span-month-year {
+  color: azure;
+  font-size: 24px;
+  font-weight: 600;
+}
+
 @media screen and (max-width: 1000px) {
   .dycalendar-body table {
     font-size: 16px;
@@ -84,6 +90,10 @@ body {
   .dycalendar-body table tr td img {
     height: 24px;
   }
+  .dycalendar-span-month-year {
+    font-size: 20px;
+    font-weight: 500;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -97,7 +107,10 @@ body {
     padding: 0;
     width: 100%;
   }
-
+  .dycalendar-span-month-year {
+    font-size: 18px;
+    font-weight: 500;
+  }
 }
 
 @media screen and (max-width: 320px){
